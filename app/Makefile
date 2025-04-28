@@ -1,5 +1,4 @@
 install-dist:
-	./gradlew installDist
-
+	gradlew.bat installDist
 run-dist: install-dist
-   	./build/install/app/bin/app
+	"build/install/app/bin/app.bat"
