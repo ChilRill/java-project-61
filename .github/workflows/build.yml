@@ -67,12 +67,6 @@ jobs:
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-         run: ./app/gradlew build sonar --info \
-               -Dsonar.host.url=https://sonarcloud.io \
-               -Dsonar.token=${{ env.SONAR_TOKEN }}
-      - name: Build and analyze
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: ./app/gradlew build sonar --info \
                -Dsonar.host.url=https://sonarcloud.io \
                -Dsonar.token=${{ env.SONAR_TOKEN }}
