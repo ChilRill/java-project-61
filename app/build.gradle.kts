@@ -1,6 +1,8 @@
 plugins {
     id("java")
     id("application")
+    id("org.sonarqube") version "4.4.1.3373"
+    id("checkstyle")
 }
 
 group = "hexlet.code"
@@ -26,6 +28,11 @@ tasks.getByName("run", JavaExec::class) {
     standardInput = System.`in`
 }
 
+checkstyle {
+    toolVersion = "10.12.1"
+    configFile = layout.projectDirectory.file("config/checkstyle/checkstyle.xml").asFile
+
+}
 sonar {
     properties {
         property("sonar.projectKey", "ChilRill_java-project-61")
