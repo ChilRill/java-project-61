@@ -4,25 +4,34 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        Scanner menuScanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Great");
+        System.out.println("2 - Even");
         System.out.println("0 - Exit");
-
         System.out.println("Your choice: ");
-        String userChoice = menuScanner.nextLine();
 
-        switch (userChoice) {
-            case "1":
+        int choice = scanner.nextInt();
+        scanner.nextLine();
+
+        switch (choice) {
+            case 1:
                 Cli.greetUser();
                 break;
-            case "0":
+            case 2:
+                System.out.println("\nWelcome to the Brain Games!");
+                System.out.println("May I have your name? ");
+                String name = scanner.nextLine();
+                System.out.println("Hello, " + name + "!");
+                EvenGame.play(scanner);
+                break;
+            case 0:
                 System.out.println("Exiting...");
                 break;
             default:
                 System.out.println("Invalid choice. Please select a valid game number.");
         }
-        menuScanner.close();
+        scanner.close();
     }
 }
