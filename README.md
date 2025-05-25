@@ -10,3 +10,9 @@
 
 ## Демонстрация игры "Наибольший общий делитель (НОД)"
 ![Аскинема](screenshots/GCD_game_screenshot.png)
+
+## Демонстрация игры "Арифметическая прогрессия"
+![Аскинема](screenshots/progression_game_screenshot.png)
+
+## Демонстрация игры "Простое ли число?"
+![Аскинема](screenshots/prime_game_screenshot.png)
