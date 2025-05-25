@@ -4,3 +4,6 @@
 
 ## Демонстрация игры "Проверка на четность"
 ![Аскинема](screenshots/even_game_screenshot.png)
+
+## Демонстрация игры "Калькулятор"
+![Аскинема](screenshots/calc_game_screenshot.png)
