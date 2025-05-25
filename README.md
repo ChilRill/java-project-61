@@ -6,7 +6,7 @@
 ![Аскинема](screenshots/even_game_screenshot.png)
 
 ## Демонстрация игры "Калькулятор"
-![Аскинема](screenshots/calc_game_screenshot.png)
+![Аскинема](screenshots/Calc_game_screenshot.png)
 
 ## Демонстрация игры "Наибольший общий делитель (НОД)"
 ![Аскинема](screenshots/GCD_game_screenshot.png)
