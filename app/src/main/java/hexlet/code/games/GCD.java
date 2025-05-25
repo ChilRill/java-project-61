@@ -24,7 +24,7 @@ public class GCD {
             String correctAnswer = String.valueOf(correctAnswerValue);
 
             System.out.println("Question: " + question);
-            System.out.println("Your answer: ");
+            System.out.print("Your answer: ");
             String userAnswer = scanner.nextLine().trim();
 
             if (userAnswer.equals(correctAnswer)) {

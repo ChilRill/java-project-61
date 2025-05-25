@@ -1,6 +1,6 @@
 setup:
 	cd code/app && chmod +x ./gradlew && ./gradlew clean install
 install-dist:
-	gradlew.bat installDist
+	gradlew installDist
 run-dist: install-dist
 	"build/install/app/bin/app.bat"
