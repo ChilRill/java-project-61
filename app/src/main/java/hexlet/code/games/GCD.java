@@ -4,43 +4,27 @@ import hexlet.code.Engine;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Calc {
+public class GCD {
     public static void play() {
         String playerName = Engine.getPlayerName();
 
-        System.out.println("What is the result of the expression?");
+        System.out.println("Find the common divisor of given numbers.");
 
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         int correctAnswersCount = 0;
-        int rounds = 3;
+        final int rounds = 3;
 
         while (correctAnswersCount < rounds) {
-            int num1 = random.nextInt(40);
-            int num2 = random.nextInt(40);
-            char[] operations = {'+', '-', '*'};
-            char operation = operations[random.nextInt(operations.length)];
+            int num1 = random.nextInt(100) + 1;
+            int num2 = random.nextInt(100) + 1;
 
-            String question = num1 + " " + operation + " " + num2;
-            int correctAnswerValue;
-
-            switch (operation) {
-                case '+':
-                    correctAnswerValue = num1 + num2;
-                    break;
-                case '-':
-                    correctAnswerValue = num1 - num2;
-                    break;
-                case '*':
-                    correctAnswerValue = num1 * num2;
-                    break;
-                default:
-                    throw new IllegalStateException("Unexpected operation: " + operation);
-            }
+            String question = num1 + " " + num2;
+            int correctAnswerValue = findGCD(num1, num2);
             String correctAnswer = String.valueOf(correctAnswerValue);
 
             System.out.println("Question: " + question);
-            System.out.print("Your answer: ");
+            System.out.println("Your answer: ");
             String userAnswer = scanner.nextLine().trim();
 
             if (userAnswer.equals(correctAnswer)) {
@@ -56,8 +40,13 @@ public class Calc {
         Engine.showCongratulationsMessage(playerName);
         scanner.close();
     }
+
+    private static int findGCD(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
 }
-
-
-
-

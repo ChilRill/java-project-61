@@ -7,3 +7,6 @@
 
 ## Демонстрация игры "Калькулятор"
 ![Аскинема](screenshots/calc_game_screenshot.png)
+
+## Демонстрация игры "Наибольший общий делитель (НОД)"
+![Аскинема](screenshots/GCD_game_screenshot.png)

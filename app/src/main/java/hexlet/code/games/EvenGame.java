@@ -13,9 +13,9 @@ public class EvenGame {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         int correctAnswersCount = 0;
-        int correctAnswerNeeded = 3;
+        int rounds = 3;
 
-        while (correctAnswersCount < correctAnswerNeeded) {
+        while (correctAnswersCount < rounds) {
             int number = random.nextInt(100) + 1;
             System.out.println("Question: " + number);
             System.out.println("Your answer: ");
