@@ -23,7 +23,7 @@ public class App {
 
         switch (choice) {
             case 1:
-                Cli.greetUser();
+                Engine.getPlayerName();
                 break;
             case 2:
                 EvenGame.play();
