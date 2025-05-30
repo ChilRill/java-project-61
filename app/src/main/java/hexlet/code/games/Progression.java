@@ -3,7 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import java.util.Random;
 
-
 public class Progression {
     public static void play() {
         String gameDescription = "What number is missing in the progression?";
