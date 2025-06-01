@@ -3,16 +3,16 @@
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=ChilRill_java-project-61&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=ChilRill_java-project-61)
 
 ## Демонстрация игры "Проверка на четность"
-![Аскинема](screenshots/even_game_screenshot.png)
+![Аскинема](screenshots/Even_game.png)
 
 ## Демонстрация игры "Калькулятор"
-![Аскинема](screenshots/Calc_game_screenshot.png)
+![Аскинема](screenshots/Calc_game.png)
 
 ## Демонстрация игры "Наибольший общий делитель (НОД)"
-![Аскинема](screenshots/GCD_game_screenshot.png)
+![Аскинема](screenshots/GCD_game.png)
 
 ## Демонстрация игры "Арифметическая прогрессия"
-![Аскинема](screenshots/progression_game_screenshot.png)
+![Аскинема](screenshots/Progression_game.png)
 
 ## Демонстрация игры "Простое ли число?"
-![Аскинема](screenshots/prime_game_screenshot.png)
+![Аскинема](screenshots/Prime_game.png)

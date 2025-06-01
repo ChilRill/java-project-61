@@ -4,14 +4,14 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class EvenGame {
+    private static final Random RANDOM = new Random();
+
     public static void play() {
         String gameDescription = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         String [][] gameData = new String[Engine.rounds][2];
 
-        Random random = new Random();
-
         for (int i = 0; i < Engine.rounds; i++) {
-            int number = random.nextInt(100) + 1;
+            int number = RANDOM.nextInt(100) + 1;
             String question = String.valueOf(number);
 
             String correctAnswer;

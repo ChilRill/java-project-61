@@ -2,20 +2,19 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 import java.util.Random;
-import java.util.Scanner;
 
 public class Calc {
+    private static final Random RANDOM = new Random();
+
     public static void play() {
         String gameDescription = "What is the result of the expression?";
         String[][] gameData = new String[Engine.rounds][2];
 
-        Random random = new Random();
-
         for (int i = 0; i < Engine.rounds; i++) {
-            int num1 = random.nextInt(40);
-            int num2 = random.nextInt(40);
+            int num1 = RANDOM.nextInt(40);
+            int num2 = RANDOM.nextInt(40);
             char[] operations = {'+', '-', '*'};
-            char operation = operations[random.nextInt(operations.length)];
+            char operation = operations[RANDOM.nextInt(operations.length)];
 
             String question = num1 + " " + operation + " " + num2;
             int correctAnswerValue;

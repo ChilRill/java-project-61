@@ -4,14 +4,14 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Prime {
+    private static final Random RANDOM = new Random();
+
     public static void play() {
         String gameDescription = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] gameData = new String[Engine.rounds][2];
 
-        Random random = new Random();
-
         for (int i = 0; i < Engine.rounds; i++) {
-            int number = random.nextInt(100) + 2;
+            int number = RANDOM.nextInt(100) + 2;
 
             String question = String.valueOf(number);
             String correctAnswer = isPrime(number) ? "yes" : "no";
