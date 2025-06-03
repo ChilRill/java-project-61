@@ -24,9 +24,9 @@ public class App {
         System.out.println(EVEN_CHOICE + " - Even");
         System.out.println(CALC_CHOICE + " - Calc");
         System.out.println(GCD_CHOICE + " - GCD");
-        System.out.println(PROGRESSION_CHOICE+ " - Progression");
-        System.out.println(PRIME_CHOICE+ " - Prime");
-        System.out.println(EXIT_CHOICE+ " - Exit");
+        System.out.println(PROGRESSION_CHOICE + " - Progression");
+        System.out.println(PRIME_CHOICE + " - Prime");
+        System.out.println(EXIT_CHOICE + " - Exit");
         System.out.print("Your choice: ");
 
         int choice = menuScanner.nextInt();
