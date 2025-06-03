@@ -8,9 +8,9 @@ public class Calc {
 
     public static void play() {
         String gameDescription = "What is the result of the expression?";
-        String[][] gameData = new String[Engine.rounds][2];
+        String[][] gameData = new String[Engine.ROUNDS][2];
 
-        for (int i = 0; i < Engine.rounds; i++) {
+        for (int i = 0; i < Engine.ROUNDS; i++) {
             int num1 = RANDOM.nextInt(40);
             int num2 = RANDOM.nextInt(40);
             char[] operations = {'+', '-', '*'};

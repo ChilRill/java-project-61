@@ -6,12 +6,19 @@ import java.util.Random;
 public class Prime {
     private static final Random RANDOM = new Random();
 
+    private static final int MAX_RANDOM_NUMBER = 100;
+    private static final int MIN_RANDOM_NUMBER = 2;
+
+    private static final int GAME_DATA_SIZE = 2;
+    private static final int FIRST_PRIME_NUMBER = 2;
+
+
     public static void play() {
         String gameDescription = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        String[][] gameData = new String[Engine.rounds][2];
+        String[][] gameData = new String[Engine.ROUNDS][GAME_DATA_SIZE];
 
-        for (int i = 0; i < Engine.rounds; i++) {
-            int number = RANDOM.nextInt(100) + 2;
+        for (int i = 0; i < Engine.ROUNDS; i++) {
+            int number = RANDOM.nextInt(MAX_RANDOM_NUMBER) + MIN_RANDOM_NUMBER;
 
             String question = String.valueOf(number);
             String correctAnswer = isPrime(number) ? "yes" : "no";
@@ -24,10 +31,10 @@ public class Prime {
     }
 
     private static boolean isPrime(int number) {
-        if (number < 2) {
+        if (number < FIRST_PRIME_NUMBER) {
             return false;
         }
-        for (int i = 2; i <= Math.sqrt(number); i++) {
+        for (int i = FIRST_PRIME_NUMBER; i <= Math.sqrt(number); i++) {
             if (number % i == 0) {
                 return false;
             }

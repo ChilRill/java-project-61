@@ -6,13 +6,18 @@ import java.util.Random;
 public class GCD {
     private static final Random RANDOM = new Random();
 
+    private static final int MAX_RANDOM_NUMBER = 100;
+    private static final int MIN_RANDOM_NUMBER = 1;
+
+    private static final int GAME_DATA_SIZE = 2;
+
     public static void play() {
         String gameDescription = "Find the greatest common divisor of given numbers.";
-        String[][] gameData = new String[Engine.rounds][2];
+        String[][] gameData = new String[Engine.ROUNDS][GAME_DATA_SIZE];
 
-        for (int i = 0; i < Engine.rounds; i++) {
-            int num1 = RANDOM.nextInt(100) + 1;
-            int num2 = RANDOM.nextInt(100) + 1;
+        for (int i = 0; i < Engine.ROUNDS; i++) {
+            int num1 = RANDOM.nextInt(MAX_RANDOM_NUMBER) + MIN_RANDOM_NUMBER;
+            int num2 = RANDOM.nextInt(MAX_RANDOM_NUMBER) + MIN_RANDOM_NUMBER;
             String question = num1 + " " + num2;
             String correctAnswer = String.valueOf(calculateGCD(num1, num2));
 

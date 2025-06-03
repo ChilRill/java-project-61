@@ -5,15 +5,25 @@ import java.util.Random;
 
 public class Progression {
     private static final Random RANDOM = new Random();
+    private static final int START_FIRST_NUMBER = 20;
+    private static final int START_SECOND_NUMBER = 1;
+
+    private static final int STEP_FIRST_NUMBER = 10;
+    private static final int STEP_SECOND_NUMBER = 1;
+
+    private static final int PROGRESSION_LENGTH_RANDOM_BOUND = 6;
+    private static final int MIN_PROGRESSION_LENGTH = 5;
+
+    private static final int GAME_DATA_SIZE = 2;
 
     public static void play() {
         String gameDescription = "What number is missing in the progression?";
-        String[][] gameData = new String[Engine.rounds][2];
+        String[][] gameData = new String[Engine.ROUNDS][GAME_DATA_SIZE];
 
-        for (int i = 0; i < Engine.rounds; i++) {
-            int start = RANDOM.nextInt(20) + 1;
-            int step = RANDOM.nextInt(10) + 1;
-            int progressionLength = RANDOM.nextInt(6) + 5;
+        for (int i = 0; i < Engine.ROUNDS; i++) {
+            int start = RANDOM.nextInt(START_FIRST_NUMBER) + START_SECOND_NUMBER;
+            int step = RANDOM.nextInt(STEP_FIRST_NUMBER) + STEP_SECOND_NUMBER;
+            int progressionLength = RANDOM.nextInt(PROGRESSION_LENGTH_RANDOM_BOUND) + MIN_PROGRESSION_LENGTH;
 
             int[] numbers = new int[progressionLength];
             for (int j = 0; j < progressionLength; j++) {
